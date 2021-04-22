@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    font-family:  'Cinzel', serif;;
+}
+.head{
+    background-color: rgb(170, 192, 214);
+  
+text-align: center;
+}
+.heading{
+    color: red;
+    padding: 20px;
+    padding: 50px;
+    font-weight: 900;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns:2fr 1fr ;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "first sider"
+
+    ;
+    grid-gap: 20px;
+}
+.image-content{
+    grid-area: first;
+}
+.sider{
+    grid-area: sider;
+}
