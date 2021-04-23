@@ -1,34 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
 
-*{
+* {
     margin: 0px;
-    box-sizing: border-box;
-    font-family:  'Cinzel', serif;;
-}
-.head{
-    background-color: rgb(170, 192, 214);
-  
-text-align: center;
-}
-.heading{
-    color: red;
-    padding: 20px;
-    padding: 50px;
-    font-weight: 900;
-}
-.grid-container{
-    display: grid;
-    grid-template-columns:2fr 1fr ;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "first sider"
 
+    box-sizing: border-box;
+    font-family: 'Cinzel', serif;
+}
+
+
+
+p {
+    margin: 20px;
+
+}
+
+.heading h1 {
+    background-color:  rgb(212, 68, 42);
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    color: #ffffff;
+    font-size: 44px;
+    padding: 50px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: 1fr 10fr;
+    grid-template-areas:
+        "second-head second-head  third-head  "
+        "  first  first  sider   "
     ;
-    grid-gap: 20px;
+    grid-gap: 40px;
+    width: 120vh;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
 }
-.image-content{
+
+.second-head {
+    grid-area: second-head;
+    background-color: rgb(212, 68, 42);
+    width: 100%;
+    padding: 30px;
+    text-align: left;
+    color: white;
+}
+
+.image-content {
     grid-area: first;
+    display: flex;
 }
-.sider{
+
+.third-head {
+    grid-area: third-head;
+    background-color: rgb(212, 68, 42);
+    color: white;
+}
+
+.sider {
     grid-area: sider;
+}
+
+@media (max-width:1125px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 5fr 1fr 2fr;
+        grid-template-areas:
+            "second-head    "
+            "  first      "
+            "third-head"
+            "sider"
+        ;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
