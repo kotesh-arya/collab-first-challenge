@@ -8,73 +8,56 @@
 }
 
 
-
 p {
-    margin: 20px;
+    margin: 10px;
 
 }
 
 .heading h1 {
-    background-color:  rgb(212, 68, 42);
+    background-color:  #6eb890;
     width: 100%;
     text-align: center;
     padding: 30px;
     color: #ffffff;
     font-size: 44px;
-    padding: 50px;
+    padding: 30px;
 }
-
-.grid-container {
-    display: grid;
-    grid-template-columns: 2fr 2fr 1fr;
-    grid-template-rows: 1fr 10fr;
-    grid-template-areas:
-        "second-head second-head  third-head  "
-        "  first  first  sider   "
-    ;
-    grid-gap: 40px;
-    width: 120vh;
+.grid-container{
     margin-top: 3%;
+    display: grid;
+    height:60%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
+    grid-template-columns: repeat(3 ,1fr);
+    grid-template-rows: 15% 85%;
+    grid-gap: 20px;
+    grid-template-areas: 
+    "a a   b "
+    "c c   d "
+    ;
 }
-
-.second-head {
-    grid-area: second-head;
-    background-color: rgb(212, 68, 42);
-    width: 100%;
+.header-one{
+    background-color: #6eb890;
+    grid-area: a;
     padding: 30px;
-    text-align: left;
-    color: white;
+   text-align: center;
+}
+.header-two{
+    background-color: #6eb890;
+    grid-area: b;
+    padding: 10px;
+    text-align: center;
+}
+.image-content{
+    background-color: rgb(0, 255, 76);
+    grid-area: c;
 }
 
-.image-content {
-    grid-area: first;
-    display: flex;
+.footer-three{
+    
+    grid-area: d;
 }
-
-.third-head {
-    grid-area: third-head;
-    background-color: rgb(212, 68, 42);
-    color: white;
-}
-
-.sider {
-    grid-area: sider;
-}
-
-@media (max-width:1125px) {
-    .grid-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 5fr 1fr 2fr;
-        grid-template-areas:
-            "second-head    "
-            "  first      "
-            "third-head"
-            "sider"
-        ;
-        margin-left: auto;
-        margin-right: auto;
-    }
+p{
+    font-size: 14px;
 }
